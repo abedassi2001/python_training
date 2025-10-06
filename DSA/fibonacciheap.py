@@ -69,3 +69,63 @@ print(lists)
 lists[0].append(1)
 lists[99].append(2)
 print(lists)
+
+
+
+
+
+
+
+
+
+# Definition for a binary tree node.
+# class TreeNode(object):
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+# lists=[[]]
+# def answer(self,root,depth):
+#         if root is None :
+#             return 
+#         if root.left is None and root.right is None :
+#             lists[depth].append(root.val)
+#             return 1
+#         if root.left :
+#             answer(self,root.left,depth+1)
+#         if root.right :
+#             answer(self,root.right,depth+1)
+#         lists[depth ].append(root.val)
+#         return 
+
+# def find_max_depth(self,root,depth):
+#         localdepth_left = 1
+#         localdepth_right = 1 
+#         if root is None :
+#             return 0
+#         if root.left is None and root.right is None :
+#             return 1
+#         if root.left :
+#             localdepth_left += find_max_depth(self,root.left,depth)
+#         if root.right :
+#             localdepth_right += find_max_depth(self,root.right,depth)            
+#         return max(localdepth_right,localdepth_left)     
+# class Solution(object):
+#     def levelOrder(self, root):
+#         """
+#         :type root: Optional[TreeNode]
+#         :rtype: List[List[int]]
+#         """
+#         global lists
+#         depth = 0
+#         #answer = answer(self , root , depth)
+#         tree_depth = find_max_depth(self,root,depth)
+#         print(tree_depth)
+#         lists_demo = [[] for _ in range(tree_depth )]
+#         lists = lists_demo
+#         answer(self,root,0)
+#         return lists
+
+    
+
+                                          

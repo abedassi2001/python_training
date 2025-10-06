@@ -1,3 +1,8 @@
+
+Cinema = []
+Movies = []
+
+
 def login():
         username = input("Enter your username: ")
         password = input("Enter your password: ")
