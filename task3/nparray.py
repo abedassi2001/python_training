@@ -1,24 +1,10 @@
-import numpy as np
-from numpy import random 
+import numpy as np 
 
-arr = random.randint(1,100,size = 50)
-arr[0] = 50
-print(arr)
-target = 50
-arr.sort()
-print(arr)
+def add(x,y):
+    return x+y
 
-start = 0 
-end = len(arr)- 1 
-while start <= end : 
-    mid = (start + end) // 2
-    if target > arr[mid]:
-        start = mid + 1
-    elif target < arr[mid]:
-        end = mid - 1 
-    else :
-        print(mid)
-        print(arr[mid ])
-        break                
 
-print("as u can see it doesnt exist")
+add = np.frompyfunc(add,2,1)
+
+print(add([1,2,3,4,5],[1,2,3,4,5]))
+print(np.add([1,2,3,4,5],[1,2,3,4,5]))
