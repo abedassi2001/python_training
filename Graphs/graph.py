@@ -36,6 +36,17 @@ class Graph:
             if neighbor not in visited:
                 max_edge = max(max_edge, self.find_max_edge(neighbor, visited))
         return max_edge
+
+    def find_min_edge(self,root,served = None):
+        if served is None : 
+            served = set()
+        served.add(root)
+        min_edge = float('inf')
+        for i , wieght in self.adj_list[root]:
+            min_edge = min(min_edge ,wieght)
+            if  i  not in served: 
+                min_edge = min(min_edge , self.find_min_edge(i,served))
+        return min_edge                
 g = Graph()
 g.add_edge(0, 1, 5)
 g.add_edge(0, 2, 2)
@@ -49,3 +60,5 @@ print("\nDFS traversal from vertex 0:")
 g.dfs(0)
 
 print("\nMaximum edge weight in the graph:", g.find_max_edge(0))
+
+print("\Minimum edge weight in the graph:", g.find_min_edge(0))
